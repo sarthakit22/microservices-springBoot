@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "af7f90dc-b472-4d14-9b05-2de83e4eeb83",
+		"name": "Bank Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "add-customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sarthak\",\r\n    \"gender\":\"Female\",\r\n    \"dob\":\"27-09-0001\",\r\n    \"city\":\"Jaipur\",\r\n    \"mobileNo\":\"1111111111\",\r\n    \"accType\":\"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer-service/add-customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-service",
+								"add-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer-service/all-customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-service",
+								"all-customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer-service/get-customer?custId=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-service",
+								"get-customer"
+							],
+							"query": [
+								{
+									"key": "custId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"custId\":2,\r\n    \"name\":\"Sarthak Arya\",\r\n    \"gender\":\"Male\",\r\n    \"dob\":\"27-09-1999\",\r\n    \"city\":\"Jaipur\",\r\n    \"mobileNo\":\"9024903309\",\r\n    \"accType\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/customer-service/update-customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-service",
+								"update-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/customer-service/delete-customer?custId=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer-service",
+								"delete-customer"
+							],
+							"query": [
+								{
+									"key": "custId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "add-account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accId\":3,\r\n    \"accType\":\"Saving\",\r\n    \"ifsc\":\"ABC001\",\r\n    \"balance\":100000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/account-service/add-account",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-service",
+								"add-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-amount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account-service/add-amount?accId=2&amount=100",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-service",
+								"add-amount"
+							],
+							"query": [
+								{
+									"key": "accId",
+									"value": "2"
+								},
+								{
+									"key": "amount",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account-service/delete-account?accId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-service",
+								"delete-account"
+							],
+							"query": [
+								{
+									"key": "accId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account-service/get-account?accId=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-service",
+								"get-account"
+							],
+							"query": [
+								{
+									"key": "accId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdraw-amount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/account-service/withdraw-amount?accId=2&amount=105",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"account-service",
+								"withdraw-amount"
+							],
+							"query": [
+								{
+									"key": "accId",
+									"value": "2"
+								},
+								{
+									"key": "amount",
+									"value": "105"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
